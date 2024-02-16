@@ -106,3 +106,4 @@ appendpath /opt/cuda/bin
 export CUDAHOSTCXX=/usr/bin/g++-12
 export NVCC_PREPEND_FLAGS='-ccbin /usr/bin/g++-12'
 alias append_path="appendpath"
+alias vim="nvim"
