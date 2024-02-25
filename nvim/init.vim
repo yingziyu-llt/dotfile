@@ -17,9 +17,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 "彩色括号
 Plug 'luochen1990/rainbow'
 
-"nerd tree
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 "自动补全
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = [
@@ -46,7 +43,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 
 " Markdown
 " Markdown Preview
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " " Script
 Plug 'lilydjwg/fcitx.vim'
@@ -182,12 +179,14 @@ nmap <F5> :call Debug()<CR>
 nmap <F9> :NERDTreeToggle<CR>
 nmap <F10> :terminal gedit "%"<CR>
 nmap <F12> :call Compile()<CR>
+tnoremap <Esc> <C-\><C-n>
 
 set pastetoggle=<F6>
 
 " 设置切换Buffer快捷键
 nmap <C-N> :bn<CR>
 nmap <C-P> :bp<CR>
+autocmd TermOpen * startinsert
 
 "----------------------------------------------------------
 " User Function Configure
@@ -238,4 +237,8 @@ autocmd FileType vim,tex let b:autoformat_autoindent=0
 " Vim - Vimtex Configure
 " ---------------------------------------------------------
 let g:tex_flavor = 'latex'
-let g:vimtex_quickfix_mode = 0
+let g:vimtex_view_general_viewer = 'zathura'
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_compiler_progname = 'nvr'
+
+let g:vimtex_syntax_conceal_disable = 1
