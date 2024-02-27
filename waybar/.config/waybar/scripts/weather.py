@@ -58,7 +58,7 @@ WEATHER_CODES = {
 data = {}
 
 
-weather = requests.get("https://wttr.in/peiking?format=j1").json()
+weather = requests.get("https://wttr.in/haidian?format=j1").json()
 
 
 def format_time(time):
@@ -112,4 +112,3 @@ for i, day in enumerate(weather['weather']):
 
 
 print(json.dumps(data))
-
