@@ -32,7 +32,8 @@ let g:coc_global_extensions = [
 			\ 'coc-snippets',
 			\ 'coc-xml',
 			\ 'coc-clangd',
-			\ 'coc-vimtex'
+			\ 'coc-vimtex',
+			\ 'coc-rust-analyzer'
 			\]
 
 " Latex
@@ -43,7 +44,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 
 " Markdown
 " Markdown Preview
-"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " " Script
 Plug 'lilydjwg/fcitx.vim'
@@ -231,7 +232,7 @@ let g:user = "Letian Lin"
 let g:email = "yingziyu-Lin@outlook.com"
 
 au BufWrite * :Autoformat
-autocmd FileType vim,tex let b:autoformat_autoindent=0
+autocmd FileType vim,tex,config,conf let b:autoformat_autoindent=0
 
 "----------------------------------------------------------
 " Vim - Vimtex Configure
