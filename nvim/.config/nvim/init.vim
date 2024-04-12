@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'Yggdroot/indentLine'
 
 "主题色
-Plug 'crusoexia/vim-monokai'
+Plug 'navarasu/onedark.nvim'
 
 "vim airline
 Plug 'vim-airline/vim-airline'
@@ -59,6 +59,9 @@ Plug 'vim-autoformat/vim-autoformat'
 " Git support
 Plug 'tpope/vim-fugitive'
 
+"tree sitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 
 call plug#end()
 
@@ -69,7 +72,7 @@ let g:indent_guides_start_level           = 2  " 从第二层开始可视化显�
 "----------------------------------------------------------------
 " Vim - Airline Configure
 "----------------------------------------------------------------
-let g:airline_theme="desertink"                   " 主题配色
+let g:airline_theme="onedark"                   " 主题配色
 " let g:airline_theme="nord"                   " 主题配色
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -102,7 +105,7 @@ endif
 "NerdTree
 "---------------------------------------------
 
-" autocmd vimenter * NERDTree  "自动开启Nerdtree
+"autocmd vimenter * NERDTree  "自动开启Nerdtree
 
 let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
 
@@ -141,7 +144,7 @@ source ~/.config/nvim/coc.vim
 "--------------------------------------------------------
 "              vim基本配置
 "---------------------------------------------------------
-colo monokai
+colorscheme onedark
 set nu
 syntax on
 set ts=4
@@ -149,6 +152,8 @@ set sts=4
 set sw=4
 set autoindent
 set cindent
+set nohlsearch
+set relativenumber
 
 set incsearch
 
@@ -164,7 +169,7 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set fileencoding=utf-8
 "设置为双字宽显示
 set ambiwidth=double
-set mouse-=a
+set mouse=
 
 "set fdm=indent " 代码折叠
 set fdm=marker
